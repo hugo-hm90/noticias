@@ -1,0 +1,111 @@
+.negocios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4vw;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vw;
+    height: 40vw;
+    background-image: linear-gradient(to right top, #f4fbff, #b2b9bd, #747b7f, #3c4247, #070f15);
+    
+}
+.contenido:hover {
+    background-image: linear-gradient(to bottom, #000000, #3a3a3a, #757575, #b5b5b5, #fafafa);
+   
+}
+
+.contenido .titulo {
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    padding: 0vw 2vw;
+}
+.contenido .descripcion{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    padding: 0vw 3vw;
+    font-size: 1vw;
+}
+.contenido .enlace{
+    text-align: center;
+    display: block;
+    width: 10vw;
+    background-color: var(--negro);
+    font-weight: 900;
+    border-radius: 1vw;
+    transition: all 1s;
+}
+
+.contenido .enlace:hover{
+    background-color: var(--naranja);
+    color: var(--negro);
+    transition: all 1s;
+
+}
+.negocio .contenido img{ 
+    width: 8vw;
+}
+
+@media (min-width:768px) and (max-width: 1050px) {
+    .negocios-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4vw;
+    }
+    .negocio .contenido img {
+        width: 10vw;
+    }
+
+    .contenido {
+        height: 80vw;
+    }
+    .contenido .enlace{
+        width: 15vw;
+        height: 5vw;
+        padding-top: .5vw;
+    }
+
+    .contenido .descripcion{
+        font-size: 2vw;
+    }
+    
+}
+
+
+@media (max-width: 600px){
+    .negocios-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4vw;
+    }
+
+    .main .contenedor {
+        width: 95vw;
+        padding: 0;
+        margin: 0;
+    }
+
+    .contenido{
+        height: 180vw;
+    }
+    
+    .negocio .contenido img {
+        width: 30vw;
+    }
+
+    .contenido .enlace {
+        width: 40vw;
+        height: 10vw;
+        margin-top: 7vw;
+    }
+    .contenido .descripcion{
+        font-size: 4vw;
+    }
+}
